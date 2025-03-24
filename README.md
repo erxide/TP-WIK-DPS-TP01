@@ -8,8 +8,7 @@ Run : ./server
 
 ## run Ts api
 
-```
-npx tsc
-npx tsc
-```
+Compile with : npx tsc
+
+Run : node dist/server.js
 
