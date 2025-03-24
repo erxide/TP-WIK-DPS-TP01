@@ -2,10 +2,9 @@
 
 ## run C api
 
-```
-gcc server.c -o server
-./server
-```
+Compile with : gcc server.c -o server
+
+Run : ./server
 
 ## run Ts api
 
