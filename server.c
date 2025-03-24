@@ -1,6 +1,7 @@
 // Compile with : gcc server.c -o server
 // Run : ./server
 
+#define PORT 8000
 #define AF_INET 2
 #define SOCK_STREAM 1
 #define IPPROTO_TCP 6
@@ -91,7 +92,7 @@ int main() {
 
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(8080);
+    addr.sin_port = htons(PORT);
     addr.sin_addr = INADDR_ANY;
     for (int i  = 0; i < 8; i++) addr.sin_zero[i] = 0;
 
