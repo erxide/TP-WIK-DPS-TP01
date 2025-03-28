@@ -1,8 +1,19 @@
 # TP-WIK-DPS-TP01
 
-## run Ts api
+# build docker image one staging
 
-Compile with : npx tsc
+```
+docker build -t tp02 .
+```
 
-Run : node dist/server.js
+# build docjer image multi staging
+
+```
+docker build -t tp02-ms -f dockerfile-ms .
+```
+
+# Run image
+```
+docker run -p "8080:8080" -t <image-name> 
+```
 
