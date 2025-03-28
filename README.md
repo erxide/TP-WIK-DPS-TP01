@@ -1,19 +1,8 @@
-# TP-WIK-DPS-TP01
+# TP-WIK-DPS-TP03
 
-# build docker image one staging
-
-```
-docker build -t tp02 .
-```
-
-# build docjer image multi staging
+# run api (4 replicas) with nginx reverse proxy
 
 ```
-docker build -t tp02-ms -f dockerfile-ms .
-```
-
-# Run image
-```
-docker run -p "8080:8080" -t <image-name> 
+docker-compose up -d
 ```
 

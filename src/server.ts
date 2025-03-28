@@ -1,10 +1,13 @@
 import {createServer, IncomingMessage, ServerResponse} from 'http';
+import * as os from 'os';
 
 const PORT = 8080;
+const hostname = os.hostname();
 
 const server = createServer((req: IncomingMessage, res: ServerResponse) => {
     if (req.method === "GET" && req.url === "/ping") {
-        const headersJSON = JSON.stringify(req.headers, null, 2);
+        const headers = { ...req.headers, hostname };
+        const headersJSON = JSON.stringify(headers, null, 2);
 
         res.writeHead(200, {
             "Content-Type": "application/json",

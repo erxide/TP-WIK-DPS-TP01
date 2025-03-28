@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: dockerfile-ms
+    expose:
+      - 8080
+    deploy:
+      replicas: 4
+    restart: always
+    networks:
+      - nginx
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: always
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
