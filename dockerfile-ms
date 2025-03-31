@@ -2,9 +2,13 @@ FROM node:18.19.1-alpine AS build
 
 WORKDIR /app
 
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
 
-RUN npm i && npm run build
+RUN npm run build
 
 FROM node:18.19.1-alpine AS exec
 
@@ -14,6 +18,6 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/package*.json ./
 
-EXPOSE 8080
+USER node
 
 CMD ["npm", "run", "api"]
