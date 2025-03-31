@@ -1,14 +1,8 @@
-# TP-WIK-DPS-TP01
+# TP-WIK-DPS
 
-## run C api
+## [Tp01](https://github.com/erxide/TP-WIK-DPS-TP01/tree/tp01)
 
-Compile with : gcc server.c -o server
+## [Tp02](https://github.com/erxide/TP-WIK-DPS-TP01/tree/tp02)
 
-Run : ./server
-
-## run Ts api
-
-Compile with : npx tsc
-
-Run : node dist/server.js
+## [Tp03](https://github.com/erxide/TP-WIK-DPS-TP01/tree/tp03)
 
