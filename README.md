@@ -14,6 +14,6 @@ docker build -t tp02-ms -f dockerfile-ms .
 
 # Run image
 ```
-docker run -p "8080:8080" -t <image-name> 
+docker run -it -p "8080:8080" -t <image-name> 
 ```
 
