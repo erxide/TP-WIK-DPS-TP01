@@ -7,4 +7,4 @@ spec:
     - name: echo-container
       image: registry.cluster.wik.cloud/public/echo
       ports:
-        - containerPort: 80
+        - containerPort: 8080
